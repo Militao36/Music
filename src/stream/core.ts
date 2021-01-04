@@ -6,7 +6,7 @@ import { resolve } from 'path'
 const getStat = promisify(fs.stat)
 
 const streamAudio = async (req: Request, res: Response) => {
-  const filePath = resolve(__dirname, 'audio.mp3')
+  const filePath = resolve(__dirname, 'music', 'audio.mp3')
   const stat = await getStat(filePath)
 
   // informações sobre o tipo do conteúdo e o tamanho do arquivo

@@ -19,6 +19,7 @@ module.exports = {
         '@views': './src/views',
         '@stream': './src/stream',
         '@routes': './src/routes',
+        '@upload': './src/upload',
       }
     }]
   ],
