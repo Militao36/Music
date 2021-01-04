@@ -4,7 +4,14 @@ import { Request, Response } from 'express'
 
 export class TrackController {
   stream(req: Request, res: Response) {
-    return AudioStream(req, res)
+    try {
+      const trackId = req.params.id
+      return AudioStream(req, res, trackId)
+    } catch (error) {
+      return res.status(500).json({
+        error: 'SERVE_ERROR'
+      })
+    }
   }
 
   upload(req: Request, res: Response) {
@@ -13,7 +20,9 @@ export class TrackController {
       track.trackId = req.file.filename
       return res.json(track)
     } catch (error) {
-      console.log(error)
+      return res.status(500).json({
+        error: 'SERVE_ERROR'
+      })
     }
   }
 }
