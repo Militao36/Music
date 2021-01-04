@@ -33,7 +33,7 @@
 
 			async drawAudioVisualizer(musicaid = 'c8bd59cbd6a52e426e3742cf079412c8') {
 				this.parar()
-				const response = await fetch('http://localhost:3333/stream/' + musicaid)
+				const response = await fetch('/stream/' + musicaid)
 				const blob = await response.blob()
 				this.audio = new Audio(URL.createObjectURL(blob))
 
@@ -103,7 +103,7 @@
 		}
 
 		const musica = new Music()
-		musica.drawAudioVisualizer('4f56a45d4d0257dddeb02e1a92bf77ea')
+		musica.drawAudioVisualizer('c8bd59cbd6a52e426e3742cf079412c8')
 	</script>
 </body>
 </html>
