@@ -24,7 +24,7 @@
       "@controllers/*": [
         "./src/controllers/*"
       ],
-      "@models/*": [
+      "@Entity/*": [
         "src/Entity/*"
       ],
       "@views/*": [

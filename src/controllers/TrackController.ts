@@ -1,4 +1,4 @@
-import { Track } from '@models/Track'
+import { Track } from '@Entity/Track'
 import AudioStream from '@stream/core'
 import { Request, Response } from 'express'
 
