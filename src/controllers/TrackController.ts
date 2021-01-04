@@ -1,6 +1,5 @@
 import { Track } from '@models/Track'
 import AudioStream from '@stream/core'
-import { upload } from '@upload/core'
 import { Request, Response } from 'express'
 
 export class TrackController {
@@ -11,9 +10,10 @@ export class TrackController {
   upload(req: Request, res: Response) {
     try {
       const track = new Track(req.body)
+      track.trackId = req.file.filename
       return res.json(track)
     } catch (error) {
-
+      console.log(error)
     }
   }
 }

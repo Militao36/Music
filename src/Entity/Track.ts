@@ -5,8 +5,9 @@ export class Track {
   public artista: string
   public musica: string
   public add: string
+  public trackId: string
 
-  constructor(props: Omit<Track, 'id'>, id?: string) {
+  constructor(props: Omit<Track, 'id' | 'trackId'>, id?: string) {
     Object.assign(this, props)
 
     if (!id) {
