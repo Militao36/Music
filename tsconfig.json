@@ -41,7 +41,7 @@
       ],
       "@upload/*": [
         "src/upload/*"
-      ]
+      ],
     }
   },
   "include": [

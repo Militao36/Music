@@ -3,6 +3,10 @@ import AudioStream from '@stream/core'
 import { Request, Response } from 'express'
 
 export class TrackController {
+  view(req: Request, res: Response) {
+    return res.render('index')
+  }
+
   stream(req: Request, res: Response) {
     try {
       const trackId = req.params.id

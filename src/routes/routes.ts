@@ -5,6 +5,7 @@ const router = Router()
 
 const Audio = new TrackController()
 
+router.get('/', Audio.view)
 router.get('/stream/:id', Audio.stream)
 router.post('/upload', upload.single('track'), Audio.upload)
 
